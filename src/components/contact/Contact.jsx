@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./contact.css";
 import { HiOutlineMail } from "react-icons/hi";
 import emailjs from "@emailjs/browser";
+import toastr from "toastr";
 
 const Contact = () => {
   const form =useRef();
@@ -17,9 +18,11 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text);
+            toastr.success("Email Has Been Successfully Sent")
           },
           (error) => {
             console.log(error.text);
+            toastr.error("Email Has NOT Been Sent Successfully")
           }
         );
         e.target.reset();

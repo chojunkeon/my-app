@@ -62,17 +62,26 @@
 /*============ MEDIA QUERIES (SMALL DEVICES)===============*/
 
 @media screen and (max-width: 600px) {
+    .about_container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
     .about_card{
-        grid-template-columns: 1fr 1fr;
-        width: 60%;
-        margin : 0 auto 3rem;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 20px;
+        margin-bottom: 5px;
+        height: 280px;
     }
 
     .about_content{
         text-align: center;
     }
-    .about_content p{
-        margin : 1.5rem 0;
+    .about_content p {
+            margin: 3rem 0 2.6rem;
+            color: var(--color-light);
+            width: 100%
     }
     .about_card h4{
         font-size: 1rem;
