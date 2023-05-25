@@ -19,27 +19,26 @@ const Portfolio = () => {
     },
   ];
 
+  const mapCards = ({id, image, title, github}) => {
+      return (
+        <article key={id} className="portfolio_item">
+          <div className="portfolio_item-image">
+            <img src={image} alt="Unavailable" />
+          </div>
+          <h3>{title}</h3>
+          <div className="portfolio_item-cta">
+            <a href={github} className="btn btn-primary" target="blank">
+              GitHub Link
+            </a>
+          </div>
+        </article>
+      );
+  };
   return (
     <section id="portfolio">
       <h2>Portfolio</h2>
       <div className="container portfolio_container">
-        {
-          data.map(({id,image,title,github})=>{
-            return (
-              <article key={id} className="portfolio_item">
-                <div className="portfolio_item-image">
-                  <img src={image} alt="Unavailable" />
-                </div>
-                <h3>{title}</h3>
-                <div className="portfolio_item-cta">
-                  <a href={github} className="btn btn-primary" target="blank">
-                    GitHub Link
-                  </a>
-                </div>
-              </article>
-            );
-          })
-        }
+          {data.map(mapCards)}
       </div>
     </section>
   );
