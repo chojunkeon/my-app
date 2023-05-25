@@ -25,6 +25,7 @@ const Contact = () => {
             toastr.error("Email Has NOT Been Sent Successfully")
           }
         );
+        e.target.reset();
     };
   return (
     <section id="contact">

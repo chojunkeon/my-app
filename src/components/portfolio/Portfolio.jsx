@@ -1,14 +1,21 @@
 import React from "react";
 import "./portfolio.css";
 import Immersed from "../../assets/immersed3 (1).png"
+import ChatImg from "../../assets/chat.png"
 const Portfolio = () => {
 
   const data = [
     {
       id: 1,
-      image: Immersed ,
+      image: Immersed,
       title: "Immersed Web Application",
       github: "https://github.com/chojunkeon/Immersed",
+    },
+    {
+      id: 2,
+      image: ChatImg,
+      title: "Simple Chat App",
+      github: "https://github.com/chojunkeon/SimpleChat",
     },
   ];
 
