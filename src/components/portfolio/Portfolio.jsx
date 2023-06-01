@@ -2,6 +2,7 @@ import React from "react";
 import "./portfolio.css";
 import Immersed from "../../assets/immersed3 (1).png"
 import ChatImg from "../../assets/chat.png"
+import QuizImg from "../../assets/quizimg.jpg"
 const Portfolio = () => {
 
   const data = [
@@ -16,6 +17,12 @@ const Portfolio = () => {
       image: ChatImg,
       title: "Simple Chat App",
       github: "https://github.com/chojunkeon/SimpleChat",
+    },
+    {
+      id: 3,
+      image: QuizImg,
+      title: "Simple Quiz App",
+      github: "https://github.com/chojunkeon/quiz-app",
     },
   ];
 
